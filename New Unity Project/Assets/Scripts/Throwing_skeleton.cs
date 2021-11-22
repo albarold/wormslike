@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,11 @@ public class Throwing_skeleton : MonoBehaviour
 {
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public CircleCollider2D col;
-
+    public WeaponManager wp;
     [HideInInspector] public Vector3 Position { get { return transform.position; } }
 
     int layer_mask;
+
 
     public bool OnGround =false;
     private RaycastHit2D hitInfo;
@@ -31,11 +33,18 @@ public class Throwing_skeleton : MonoBehaviour
             Debug.Log("Not on ground");
             OnGround = false;
         }
+
+       // GetComponent<SpriteRenderer>().color = OnGround ? Color.red : Color.white;
     }
 
     public void Push(Vector2 force) 
     {
         rb.AddForce(force, ForceMode2D.Impulse);
+    }
+
+    internal void SetWeapon(int index)
+    {
+        
     }
 
     public void ActivateRb()
@@ -48,4 +57,7 @@ public class Throwing_skeleton : MonoBehaviour
         rb.angularVelocity = 0f;
         rb.isKinematic = true;
     }
+
+
+
 }

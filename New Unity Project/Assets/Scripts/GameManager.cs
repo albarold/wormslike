@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public Throwing_skeleton[] Skeletons;
+    public bool asMoved = false;
     private void Awake()
     {
         if (Instance==null)
@@ -18,98 +19,46 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    Camera cam;
+    private int _currentSkeleton=0;
+    public Player_Controller Pc;
+    public WeaponManager Wm;
 
-    public Throwing_skeleton Skel;
-    public Trajectory trajectory;
-    [SerializeField]public float pushForce = 4f;
-
-    bool isDragging = false;
-
-    Vector2 startPoint;
-    Vector2 endPoint;
-    Vector2 direction;
-    Vector2 force;
-    float distance;
-
-    public float Waiting = 2;
-    public bool MovingRound = true;
-    public bool asMoved = false;
-
-    private void Start()
+    public void Start()
     {
-        cam = Camera.main;
-        Skel.DesactivateRb();
+        Wm = this.GetComponentInChildren<WeaponManager>();
     }
 
-    private void Update()
+    public void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Pc.asMoved)
         {
-            isDragging = true;
-            OnDragStart();
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            isDragging = false;
-            EndMovingRound();
-            OnDragEnd();
-            asMoved = true;
-        }
-        if (isDragging)
-        {
-            OnDrag();
-        }
-
-        if (asMoved)
-        {  
-            if (Skel.rb.velocity.magnitude<1.4 && Skel.OnGround)
+            if (_currentSkeleton <= Skeletons.Length - 1)
             {
-
-                Skel.rb.velocity = Vector2.zero;
+                _currentSkeleton++;
             }
+            else
+            {
+                _currentSkeleton = 0;
+            }
+
+            Pc.Skel = Skeletons[_currentSkeleton];
+            Pc.asMoved = false;
         }
-    }
 
-    public void EndMovingRound()
-    {
-        MovingRound = false;
-
-    }
-    void OnDragStart()
-    {
-        Skel.DesactivateRb();
-        startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
-
-        trajectory.Show();
-    }    
-    void OnDrag()
-    {
-        endPoint= cam.ScreenToWorldPoint(Input.mousePosition);
-        distance = Vector2.Distance(startPoint, endPoint);
-        direction = (startPoint - endPoint).normalized;
-
-
-        force = direction * distance * pushForce;
-       
-        /*else
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            force = direction * distance * WeaponForce;
+            Skeletons[_currentSkeleton].SetWeapon(1);
+            
+        }
+        /*if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Wm.Weapon_2();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Wm.Weapon_3();
         }*/
-        
-
-        Debug.DrawLine(startPoint, endPoint);
-
-        trajectory.UpdateDots(Skel.Position, force);
-        
-        
-    }    
-    void OnDragEnd()
-    {
-        Skel.ActivateRb();
-        
-        Skel.Push(force);
-        
-        trajectory.Hide();
     }
+
+
 }
