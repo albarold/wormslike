@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public Throwing_skeleton[] Skeletons;
-    public bool asMoved = false;
+
     private void Awake()
     {
         if (Instance==null)
@@ -21,43 +21,39 @@ public class GameManager : MonoBehaviour
 
     private int _currentSkeleton=0;
     public Player_Controller Pc;
-    public WeaponManager Wm;
 
-    public void Start()
+    public void EndOfTurn()
     {
-        Wm = this.GetComponentInChildren<WeaponManager>();
+        Debug.Log("turn end");
+        if (_currentSkeleton <= Skeletons.Length - 1)
+        {
+            _currentSkeleton++;
+        }
+        else
+        {
+            _currentSkeleton = 0;
+        }
+
+        Pc.Skel = Skeletons[_currentSkeleton];
+        
     }
 
     public void Update()
     {
-        if (Pc.asMoved)
-        {
-            if (_currentSkeleton <= Skeletons.Length - 1)
-            {
-                _currentSkeleton++;
-            }
-            else
-            {
-                _currentSkeleton = 0;
-            }
-
-            Pc.Skel = Skeletons[_currentSkeleton];
-            Pc.asMoved = false;
-        }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Skeletons[_currentSkeleton].SetWeapon(1);
             
         }
-        /*if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Wm.Weapon_2();
+            Skeletons[_currentSkeleton].SetWeapon(2);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Wm.Weapon_3();
-        }*/
+            Skeletons[_currentSkeleton].SetWeapon(3);
+        }
     }
 
 

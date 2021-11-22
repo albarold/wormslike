@@ -20,6 +20,7 @@ public class Player_Controller : MonoBehaviour
     public float Waiting = 2;
   
     public bool asMoved = false;
+  
 
     Camera cam;
     private void Start()
@@ -30,7 +31,7 @@ public class Player_Controller : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)&&!asMoved)
+        if (Input.GetMouseButtonDown(0))
         {
             isDragging = true;
             OnDragStart();
@@ -39,7 +40,9 @@ public class Player_Controller : MonoBehaviour
         {
             isDragging = false;
             OnDragEnd();
-            asMoved = true;
+
+            asMoved = !asMoved;
+            
         }
         if (isDragging)
         {
@@ -51,8 +54,10 @@ public class Player_Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         if (asMoved)
         {
+            
             if (Skel.OnGround && Skel.rb.velocity.y < 0)
             {
                 Skel.rb.velocity *= 0.9f;
@@ -79,7 +84,7 @@ public class Player_Controller : MonoBehaviour
         direction = (startPoint - endPoint).normalized;
 
 
-        force = direction * distance * pushForce;
+        force = direction * distance;
 
         /*else
         {
@@ -88,8 +93,15 @@ public class Player_Controller : MonoBehaviour
 
 
         Debug.DrawLine(startPoint, endPoint);
-
-        trajectory.UpdateDots(Skel.Position, force);
+        if (!asMoved)
+        {
+           trajectory.UpdateDots(Skel.Position, force*pushForce);
+        }
+        else
+        {
+            trajectory.UpdateDots(Skel.Position, force*Skel.wp.ActiveWeapon.GetComponent<Basic_Weapon>().PushForce);
+        }
+        
 
 
     }
@@ -98,11 +110,14 @@ public class Player_Controller : MonoBehaviour
         Skel.ActivateRb();
         if (!asMoved)
         {
-            Skel.Push(force);
+            Debug.Log("skel");
+            Skel.Push(force*pushForce);
         }
         else
         {
-            //launch weapon
+            Debug.Log("weapon");
+            Skel.wp.Launch(force);
+            GameManager.Instance.EndOfTurn();
         }
         
 

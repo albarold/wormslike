@@ -30,7 +30,7 @@ public class Throwing_skeleton : MonoBehaviour
             OnGround = true;
         else
         {
-            Debug.Log("Not on ground");
+
             OnGround = false;
         }
 
@@ -44,7 +44,7 @@ public class Throwing_skeleton : MonoBehaviour
 
     internal void SetWeapon(int index)
     {
-        
+        wp.ChangeWeapon(index);
     }
 
     public void ActivateRb()
