@@ -42,7 +42,7 @@ public class Player_Controller : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             isDragging = false;
-            OnDragEnd();
+            
 
             if (moving)
             {
@@ -53,7 +53,7 @@ public class Player_Controller : MonoBehaviour
             {
                 asShot = true;
             }
-            
+            OnDragEnd();
         }
         if (isDragging)
         {
@@ -68,7 +68,7 @@ public class Player_Controller : MonoBehaviour
         
         if (asMoved)
         {
-            
+            Debug.Log("pataaaaaaaaaaaaaaaaaaate");
             if (Skel.OnGround && Skel.rb.velocity.y < 0)
             {
                 Skel.rb.velocity *= 0.9f;
@@ -134,7 +134,10 @@ public class Player_Controller : MonoBehaviour
 
         if (asMoved&&asShot)
         {
+            asMoved = false;
+            asShot = false;
             GameManager.Instance.EndOfTurn();
+            
         }
         trajectory.Hide();
     }
