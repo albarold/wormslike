@@ -20,7 +20,10 @@ public class Player_Controller : MonoBehaviour
     public float Waiting = 2;
   
     public bool asMoved = false;
-  
+    public bool asShot = false;
+
+    public bool moving=false;
+
 
     Camera cam;
     private void Start()
@@ -41,7 +44,15 @@ public class Player_Controller : MonoBehaviour
             isDragging = false;
             OnDragEnd();
 
-            asMoved = !asMoved;
+            if (moving)
+            {
+                asMoved = true;
+                
+            }
+            else
+            {
+                asShot = true;
+            }
             
         }
         if (isDragging)
@@ -93,7 +104,7 @@ public class Player_Controller : MonoBehaviour
 
 
         Debug.DrawLine(startPoint, endPoint);
-        if (!asMoved)
+        if (moving)
         {
            trajectory.UpdateDots(Skel.Position, force*pushForce);
         }
@@ -108,19 +119,23 @@ public class Player_Controller : MonoBehaviour
     void OnDragEnd()
     {
         Skel.ActivateRb();
-        if (!asMoved)
+        if (moving)
         {
             Debug.Log("skel");
             Skel.Push(force*pushForce);
+            moving = false;
         }
         else
         {
             Debug.Log("weapon");
             Skel.wp.Launch(force);
+            asShot = true;
+        }
+
+        if (asMoved&&asShot)
+        {
             GameManager.Instance.EndOfTurn();
         }
-        
-
         trajectory.Hide();
     }
 }

@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public void EndOfTurn()
     {
         Debug.Log("turn end");
-        if (_currentSkeleton <= Skeletons.Length - 1)
+        if (_currentSkeleton < Skeletons.Length - 1)
         {
             _currentSkeleton++;
         }
@@ -44,15 +44,22 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Skeletons[_currentSkeleton].SetWeapon(1);
-            
+            Pc.moving = false;
+
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             Skeletons[_currentSkeleton].SetWeapon(2);
+            Pc.moving = false;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             Skeletons[_currentSkeleton].SetWeapon(3);
+            Pc.moving = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Pc.moving = true;
         }
     }
 
