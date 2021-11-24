@@ -44,15 +44,7 @@ public class Player_Controller : MonoBehaviour
             isDragging = false;
             
 
-            if (moving)
-            {
-                asMoved = true;
-                
-            }
-            else
-            {
-                asShot = true;
-            }
+            
             OnDragEnd();
         }
         if (isDragging)
@@ -118,19 +110,23 @@ public class Player_Controller : MonoBehaviour
     }
     void OnDragEnd()
     {
+
         Skel.ActivateRb();
         if (moving)
         {
             Debug.Log("skel");
             Skel.Push(force*pushForce);
             moving = false;
+            asMoved = true;
         }
-        else
+        else if(!asShot)
         {
             Debug.Log("weapon");
             Skel.wp.Launch(force);
             asShot = true;
         }
+
+       
 
         if (asMoved&&asShot)
         {
