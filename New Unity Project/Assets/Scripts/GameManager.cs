@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public Throwing_skeleton[] Skeletons;
+    //public Throwing_skeleton[] Skeletons;
+    public List<Throwing_skeleton> Skeletons = new List<Throwing_skeleton>();
 
     private void Awake()
     {
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
     public void EndOfTurn()
     {
         Debug.Log("turn end");
-        if (_currentSkeleton < Skeletons.Length - 1)
+        if (_currentSkeleton < Skeletons.Count - 1)
         {
             _currentSkeleton++;
         }
@@ -63,5 +64,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void DeleteSkeleton(Throwing_skeleton Skel)
+    {
+        
+         Skeletons.Remove(Skel);
+
+    }
 
 }

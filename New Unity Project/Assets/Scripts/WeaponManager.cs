@@ -22,5 +22,9 @@ public class WeaponManager : MonoBehaviour
     {
         ActiveWeapon.GetComponent<Basic_Weapon>().Launch(force);
     }
+    public void SetupLaunchforce()
+    {
+        ActiveWeapon.GetComponent<Basic_Weapon>().SetupLaunchforce();
+    }
 
 }

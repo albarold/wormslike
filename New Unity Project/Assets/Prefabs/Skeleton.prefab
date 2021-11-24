@@ -91,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4088640045498311732}
   - component: {fileID: 4088640045498311735}
+  - component: {fileID: 1445525328702973343}
   - component: {fileID: 4088640045498311733}
   - component: {fileID: 4088640045498311734}
   - component: {fileID: 4088640045498311737}
@@ -167,6 +168,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1445525328702973343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088640045498311736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554a9031665166d4580154ed54f7a6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4088640045498311733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,10 +276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5005ee6155704fa4ab35cbe87cb7017f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Distance: 0.2
   PushForce: 3.1
-  Candy_Damage: 0
-  CandyPrefab: {fileID: 5541635207376090538, guid: f69597a7c1908a2459b369fc8c39b6ab, type: 3}
-  PushForce: 3.1
+  ThisPushForce: 0
   Candy_Damage: 0
   CandyPrefab: {fileID: 5541635207376090538, guid: f69597a7c1908a2459b369fc8c39b6ab, type: 3}
 --- !u!1 &4088640045656730016

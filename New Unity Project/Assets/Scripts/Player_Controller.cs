@@ -93,7 +93,7 @@ public class Player_Controller : MonoBehaviour
         {
             force = direction * distance * WeaponForce;
         }*/
-
+        Skel.wp.SetupLaunchforce();
 
         Debug.DrawLine(startPoint, endPoint);
         if (moving)
