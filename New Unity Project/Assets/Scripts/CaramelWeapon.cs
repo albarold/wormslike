@@ -18,7 +18,8 @@ public class CaramelWeapon : Basic_Weapon
         Candy = Instantiate(CandyPrefab,transform.parent.position + new Vector3(force.x*Distance,force.y*Distance),Quaternion.identity);
         Candy.GetComponent<Rigidbody2D>().AddForce(force * PushForce, ForceMode2D.Impulse);
         Candy.GetComponent<DoDamage>()._Damages = Candy_Damage;
-        Candy.GetComponent<DoDamage>().SkelLauncher = gameObject;
+        Candy.GetComponent<DoDamage>().SkelLauncher = transform.parent.gameObject.transform.parent.gameObject;
+        Debug.Log(transform.parent.gameObject.transform.parent.gameObject);
     }
 
 

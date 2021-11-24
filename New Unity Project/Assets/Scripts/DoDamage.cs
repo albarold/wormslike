@@ -10,6 +10,7 @@ public class DoDamage : MonoBehaviour
     public GameObject SkelLauncher;
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject);
         if (collision.gameObject.layer== 6 && collision.gameObject!=SkelLauncher)
         {
             collision.gameObject.GetComponent<SkeletonData>().TakeDamage(_Damages);
