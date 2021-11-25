@@ -23,6 +23,15 @@ public class GameManager : MonoBehaviour
     private int _currentSkeleton=0;
     public Player_Controller Pc;
 
+    public void AddSkel(GameObject PrefabSkel)
+    {
+        if (Skeletons.Count>=4)
+        {
+            Time.timeScale = 0;
+        }
+        Skeletons[Skeletons.Count]= Instantiate(PrefabSkel,null).transform.GetComponent<Throwing_skeleton>();
+        
+    }
     public void EndOfTurn()
     {
         Debug.Log("turn end");
