@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     //public Throwing_skeleton[] Skeletons;
     public List<Throwing_skeleton> Skeletons = new List<Throwing_skeleton>();
-
+    public GameObject[] SpawnPoints;
     private void Awake()
     {
         if (Instance==null)
@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     private int _currentSkeleton=0;
     public Player_Controller Pc;
     public GameObject PlayerMenu;
+
+    private int SpawnIndex=0;
     public void AddSkel(GameObject PrefabSkel)
     {
         
@@ -31,8 +33,13 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
             PlayerMenu.SetActive(false);
         }
-        Skeletons.Add(Instantiate(PrefabSkel, null).transform.GetComponent<Throwing_skeleton>());
+        GameObject newSkel = Instantiate(PrefabSkel, null);
+        newSkel.transform.position = SpawnPoints[SpawnIndex].transform.position;
         
+        SpawnIndex++;
+        Skeletons.Add(newSkel.transform.GetComponent<Throwing_skeleton>());
+        
+
         Pc.Skel = Skeletons[0];
     }
     public void EndOfTurn()

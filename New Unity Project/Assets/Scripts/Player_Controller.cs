@@ -34,25 +34,28 @@ public class Player_Controller : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Time.timeScale != 0)
         {
-            isDragging = true;
-            OnDragStart();
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            isDragging = false;
-            
 
-            
-            OnDragEnd();
-        }
-        if (isDragging)
-        {
-            OnDrag();
-        }
+            if (Input.GetMouseButtonDown(0))
+            {
+                isDragging = true;
+                OnDragStart();
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                isDragging = false;
 
 
+
+                OnDragEnd();
+            }
+            if (isDragging)
+            {
+                OnDrag();
+            }
+
+        }
     }
 
     private void FixedUpdate()
