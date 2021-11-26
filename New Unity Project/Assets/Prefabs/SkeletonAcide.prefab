@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4088640045498311734}
   - component: {fileID: 4088640045498311737}
   m_Layer: 6
-  m_Name: Skeleton
+  m_Name: SkeletonAcide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,6 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554a9031665166d4580154ed54f7a6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Life: 100
+  MaxLife: 100
+  LifeBar: {fileID: 0}
 --- !u!114 &4088640045498311733
 MonoBehaviour:
   m_ObjectHideFlags: 0
