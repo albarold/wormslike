@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4088640045498311734}
   - component: {fileID: 4088640045498311737}
   m_Layer: 6
-  m_Name: Skeleton
+  m_Name: SkeletonCaramel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,6 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554a9031665166d4580154ed54f7a6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Life: 100
+  MaxLife: 100
+  LifeBar: {fileID: 0}
 --- !u!114 &4088640045498311733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,8 +281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Distance: 0.2
   PushForce: 3.1
-  ThisPushForce: 0
-  Candy_Damage: 0
+  ThisPushForce: 5
+  Candy_Damage: 10
   CandyPrefab: {fileID: 5541635207376090538, guid: f69597a7c1908a2459b369fc8c39b6ab, type: 3}
 --- !u!1 &4088640045656730016
 GameObject:
