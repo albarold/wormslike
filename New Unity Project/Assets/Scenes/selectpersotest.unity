@@ -1217,7 +1217,7 @@ GameObject:
   - component: {fileID: 952696599}
   - component: {fileID: 952696598}
   m_Layer: 5
-  m_Name: ButtonMexicain
+  m_Name: ButtonChamallow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1929,7 +1929,7 @@ GameObject:
   - component: {fileID: 1623136576}
   - component: {fileID: 1623136575}
   m_Layer: 5
-  m_Name: ButtonCitrouille
+  m_Name: ButtonCaramel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2186,7 +2186,7 @@ GameObject:
   - component: {fileID: 1827216239}
   - component: {fileID: 1827216238}
   m_Layer: 5
-  m_Name: ButtonFrank
+  m_Name: ButtonAcide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2309,7 +2309,7 @@ GameObject:
   - component: {fileID: 1888028229}
   - component: {fileID: 1888028228}
   m_Layer: 5
-  m_Name: ButtonSorcier
+  m_Name: ButtonChewingGum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
