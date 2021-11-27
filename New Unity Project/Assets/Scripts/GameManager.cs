@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public Player_Controller Pc;
     public GameObject PlayerMenu;
     public GameObject[] LifeBars;
+    
     private int SpawnIndex=0;
     public void AddSkel(GameObject PrefabSkel)
     {
@@ -57,23 +58,23 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             Skeletons[_currentSkeleton].SetWeapon(1);
             Pc.moving = false;
 
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             Skeletons[_currentSkeleton].SetWeapon(2);
             Pc.moving = false;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             Skeletons[_currentSkeleton].SetWeapon(3);
             Pc.moving = false;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Pc.moving = true;
         }

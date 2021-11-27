@@ -72,7 +72,7 @@ public class Player_Controller : MonoBehaviour
         
         if (asMoved)
         {
-            Debug.Log("pataaaaaaaaaaaaaaaaaaate");
+     
             if (Skel.OnGround && Skel.rb.velocity.y < 0)
             {
                 Skel.rb.velocity *= 0.9f;
