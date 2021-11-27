@@ -5,14 +5,12 @@ using UnityEngine.UI;
 
 public class LifeBarUpdate : MonoBehaviour
 {
-    public Text TextLife;
-
+    public Image imageLife;
+    public float percent;
     public void UpdateLife(int Life, int MaxLife)
     {
-        TextLife.text = $"{Life}/{MaxLife}";
-
-        float percent = (float)Life / (float)MaxLife;
-        
+        percent = (float)Life / (float)MaxLife;
+        imageLife.fillAmount = percent;
 
     }
 }

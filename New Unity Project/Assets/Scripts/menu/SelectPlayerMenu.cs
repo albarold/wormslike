@@ -10,9 +10,9 @@ public class SelectPlayerMenu : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+   public void start()
     {
-        
+        Time.timeScale = 1;
+        gameObject.SetActive(false);
     }
 }

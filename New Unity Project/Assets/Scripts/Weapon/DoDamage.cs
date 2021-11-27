@@ -10,11 +10,15 @@ public class DoDamage : MonoBehaviour
     public GameObject SkelLauncher;
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject);
-        if (collision.gameObject.layer== 6 && collision.gameObject!=SkelLauncher)
+
+        if (collision.gameObject.layer== 6 && collision.gameObject!=SkelLauncher) //6=skelete
         {
             collision.gameObject.GetComponent<SkeletonData>().TakeDamage(_Damages);
             Destroy(gameObject);
+        }
+        if (collision.gameObject.layer==7)// 7 = destructibles
+        {
+            Destroy(collision.gameObject);
         }
     }
     private void Start()

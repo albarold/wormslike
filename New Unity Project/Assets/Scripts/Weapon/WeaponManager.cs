@@ -10,6 +10,7 @@ public class WeaponManager : MonoBehaviour
     
     internal void ChangeWeapon(int index)
     {
+
         weapons[0].SetActive(false);
         weapons[1].SetActive(false);
         weapons[2].SetActive(false);
@@ -20,11 +21,19 @@ public class WeaponManager : MonoBehaviour
 
     public void Launch(Vector2 force)
     {
-        ActiveWeapon.GetComponent<Basic_Weapon>().Launch(force);
+        if (ActiveWeapon!=null)
+        {
+            ActiveWeapon.GetComponent<Basic_Weapon>().Launch(force);
+        }
+        
     }
     public void SetupLaunchforce()
     {
-        ActiveWeapon.GetComponent<Basic_Weapon>().SetupLaunchforce();
+        if (ActiveWeapon!=null)
+        {
+            ActiveWeapon.GetComponent<Basic_Weapon>().SetupLaunchforce();
+        }
     }
+        
 
 }

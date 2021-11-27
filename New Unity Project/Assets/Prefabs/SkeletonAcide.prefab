@@ -183,6 +183,7 @@ MonoBehaviour:
   Life: 100
   MaxLife: 100
   LifeBar: {fileID: 0}
+  SkeletonNumber: 1
 --- !u!114 &4088640045498311733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,8 +282,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Distance: 0.2
   PushForce: 3.1
-  ThisPushForce: 0
-  Candy_Damage: 0
+  ThisPushForce: 2.7
+  Candy_Damage: 10
   CandyPrefab: {fileID: 5541635207376090538, guid: f69597a7c1908a2459b369fc8c39b6ab, type: 3}
 --- !u!1 &4088640045656730016
 GameObject:

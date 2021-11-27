@@ -183,6 +183,7 @@ MonoBehaviour:
   Life: 100
   MaxLife: 100
   LifeBar: {fileID: 0}
+  SkeletonNumber: 2
 --- !u!114 &4088640045498311733
 MonoBehaviour:
   m_ObjectHideFlags: 0

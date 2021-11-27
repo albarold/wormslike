@@ -24,6 +24,8 @@ public class Player_Controller : MonoBehaviour
 
     public bool moving=false;
 
+    public bool FirstClick=true;
+
 
     Camera cam;
     private void Start()
@@ -36,24 +38,31 @@ public class Player_Controller : MonoBehaviour
     {
         if (Time.timeScale != 0)
         {
-
-            if (Input.GetMouseButtonDown(0))
+            if (!FirstClick)
             {
-                isDragging = true;
-                OnDragStart();
+                if (Input.GetMouseButtonDown(0))
+                {
+                    isDragging = true;
+                    OnDragStart();
+                }
+                if (Input.GetMouseButtonUp(0))
+                {
+                    isDragging = false;
+
+
+
+                    OnDragEnd();
+                }
+                if (isDragging)
+                {
+                    OnDrag();
+                }
             }
-            if (Input.GetMouseButtonUp(0))
+            else if (Input.GetMouseButtonUp(0))
             {
-                isDragging = false;
-
-
-
-                OnDragEnd();
+                FirstClick = false;
             }
-            if (isDragging)
-            {
-                OnDrag();
-            }
+           
 
         }
     }

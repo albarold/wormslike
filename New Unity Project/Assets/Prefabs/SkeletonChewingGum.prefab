@@ -50,7 +50,7 @@ MonoBehaviour:
   - {fileID: 4088640045518812758}
   - {fileID: 4088640045656730016}
   - {fileID: 4088640045220726274}
-  ActiveWeapon: {fileID: 4088640045518812758}
+  ActiveWeapon: {fileID: 4088640045656730016}
 --- !u!1 &4088640045220726274
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +183,7 @@ MonoBehaviour:
   Life: 100
   MaxLife: 100
   LifeBar: {fileID: 0}
+  SkeletonNumber: 3
 --- !u!114 &4088640045498311733
 MonoBehaviour:
   m_ObjectHideFlags: 0

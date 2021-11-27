@@ -23,16 +23,12 @@ public class GameManager : MonoBehaviour
     private int _currentSkeleton=0;
     public Player_Controller Pc;
     public GameObject PlayerMenu;
-
+    public GameObject[] LifeBars;
     private int SpawnIndex=0;
     public void AddSkel(GameObject PrefabSkel)
     {
         
-        if (Skeletons.Count>=3)
-        {
-            Time.timeScale = 1;
-            PlayerMenu.SetActive(false);
-        }
+       
         GameObject newSkel = Instantiate(PrefabSkel, null);
         newSkel.transform.position = SpawnPoints[SpawnIndex].transform.position;
         

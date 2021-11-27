@@ -21,7 +21,17 @@ public class CaramelWeapon : Basic_Weapon
         Candy.GetComponent<DoDamage>().SkelLauncher = transform.parent.gameObject.transform.parent.gameObject;
         Debug.Log(transform.parent.gameObject.transform.parent.gameObject);
     }
-
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer==3)//ground
+        {
+            Debug.Log("ground contact");
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                Debug.DrawRay(contact.point, contact.normal, Color.white);
+            }
+        }
+    }
 
 
 }
