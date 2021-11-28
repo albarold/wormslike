@@ -118,7 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d33c20f326a4642a798f1d6979feee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Damages: 10
+  DestroyOnHit: 1
+  _Damages: 5
   SkelLauncher: {fileID: 0}
 --- !u!58 &7291216631493464497
 CircleCollider2D:
