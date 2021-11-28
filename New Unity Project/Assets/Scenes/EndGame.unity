@@ -230,7 +230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513715116}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 136.52829, y: -87.397644, z: -2491.155}
+  m_LocalPosition: {x: 136.52829, y: -162, z: -2491.155}
   m_LocalScale: {x: 62, y: 62, z: 62}
   m_Children:
   - {fileID: 757004349}
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 766f9db2323f1f74cb0c4a02b78b6bc4, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 766f9db2323f1f74cb0c4a02b78b6bc4, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 766f9db2323f1f74cb0c4a02b78b6bc4, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -333,7 +333,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 520167183}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 513715118}
+        m_TargetAssemblyTypeName: EndMenu, Assembly-CSharp
+        m_MethodName: QuitButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &520167183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,7 +454,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 766f9db2323f1f74cb0c4a02b78b6bc4, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 766f9db2323f1f74cb0c4a02b78b6bc4, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 766f9db2323f1f74cb0c4a02b78b6bc4, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -454,7 +466,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 757004351}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 513715118}
+        m_TargetAssemblyTypeName: EndMenu, Assembly-CSharp
+        m_MethodName: RestartButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &757004351
 MonoBehaviour:
   m_ObjectHideFlags: 0
