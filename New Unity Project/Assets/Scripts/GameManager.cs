@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     }
     public void EndOfTurn()
     {
+        Skeletons[_currentSkeleton].GetComponent<SkeletonData>().IncreaseMana(10);
         Debug.Log("turn end");
         if (_currentSkeleton < Skeletons.Count - 1)
         {

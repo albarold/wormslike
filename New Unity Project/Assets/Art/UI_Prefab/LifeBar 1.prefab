@@ -66,10 +66,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 8cb48c5a533b87a45adbb3a059f88eb2, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -141,10 +141,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 8cb48c5a533b87a45adbb3a059f88eb2, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -291,10 +291,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 8cb48c5a533b87a45adbb3a059f88eb2, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -366,10 +366,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 8cb48c5a533b87a45adbb3a059f88eb2, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1364,6 +1364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageLife: {fileID: 7977170231999756654}
   percent: 0
+  imageMana: {fileID: 0}
+  Manapercent: 0
 --- !u!1 &7977170232366048323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,6 +1644,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageLife: {fileID: 7977170232366048349}
   percent: 0
+  imageMana: {fileID: 0}
+  Manapercent: 0
 --- !u!1 &7977170232831378707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1702,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageLife: {fileID: 7977170232432056868}
   percent: 0
+  imageMana: {fileID: 0}
+  Manapercent: 0
 --- !u!1 &7977170232864649201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,6 +1835,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageLife: {fileID: 7977170233041365907}
   percent: 0
+  imageMana: {fileID: 0}
+  Manapercent: 0
 --- !u!1 &7977170233041365905
 GameObject:
   m_ObjectHideFlags: 0

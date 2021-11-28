@@ -18,7 +18,7 @@ public class SkeletonData : MonoBehaviour
     {
         LifeBar = GameManager.Instance.LifeBars[SkeletonNumber];
         LifeBar.SetActive(true);
-        
+        LifeBar.GetComponent<LifeBarUpdate>().UpdateMana(Mana, MaxMana);
     }
     public void Update()
     {
@@ -47,12 +47,13 @@ public class SkeletonData : MonoBehaviour
         if (Life-dmg>0)
         {
             Life -= dmg;
-            Mana += ManaGain;
+            IncreaseMana(5);
         }
         LifeBar.GetComponent<LifeBarUpdate>().UpdateLife(Life, MaxLife);
     }
-    public void UpdateMana(int ManaGain)
+    public void IncreaseMana(int ManaGain)
     {
-        
+        Mana += ManaGain;
+        LifeBar.GetComponent<LifeBarUpdate>().UpdateMana(Mana, MaxMana);
     }
 }
