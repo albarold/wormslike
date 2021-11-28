@@ -80,7 +80,7 @@ Transform:
   m_GameObject: {fileID: 4088640045498311736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.3524, y: -1.6235, z: 0}
-  m_LocalScale: {x: 0.15681407, y: 0.15681407, z: 0.7840703}
+  m_LocalScale: {x: 0.12695667, y: 0.12695667, z: 0.6347833}
   m_Children:
   - {fileID: 4088640044027591886}
   m_Father: {fileID: 0}
@@ -151,8 +151,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Life: 100
   MaxLife: 100
+  Mana: 0
+  MaxMana: 45
+  ManaGain: 10
   LifeBar: {fileID: 0}
   SkeletonNumber: 1
+  ManaFull: 0
 --- !u!114 &4088640045498311733
 MonoBehaviour:
   m_ObjectHideFlags: 0
