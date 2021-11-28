@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public Player_Controller Pc;
     public GameObject PlayerMenu;
     public GameObject[] LifeBars;
+    public VfxManager Vfx;
     
     private int SpawnIndex=0;
     public void AddSkel(GameObject PrefabSkel)
@@ -87,4 +88,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void CheckEnd()
+    {
+        if (Skeletons.Count<=1)
+        {
+            Debug.Log("Fin");
+        }
+    }
 }

@@ -16,19 +16,26 @@ public class SkeletonData : MonoBehaviour
         LifeBar = GameManager.Instance.LifeBars[SkeletonNumber];
         LifeBar.SetActive(true);
     }
+    public void Update()
+    {
+        if (Life<=0)
+        {
+            LifeBar.GetComponent<LifeBarUpdate>().UpdateLife(0, MaxLife);
+            Debug.Log("mort");
+            Instantiate(GameManager.Instance.Vfx.VfxMort, gameObject.transform.position, Quaternion.identity);
+            GameManager.Instance.DeleteSkeleton(GetComponent<Throwing_skeleton>());
+            GameManager.Instance.CheckEnd();
+            Destroy(gameObject);
+        }
+    }
     public void TakeDamage(int dmg)
     {
+        LifeBar.GetComponent<LifeBarUpdate>().UpdateLife(Life, MaxLife);
         if (Life-dmg>0)
         {
             Life -= dmg;
         }
-        else
-        {
-            
-            GameManager.Instance.DeleteSkeleton(GetComponent<Throwing_skeleton>());
-            Destroy(gameObject);
-        }
-        LifeBar.GetComponent<LifeBarUpdate>().UpdateLife(Life, MaxLife);
+        
     }
    
 }

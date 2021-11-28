@@ -23,7 +23,9 @@ public class DoDamage : MonoBehaviour
         }
         if (collision.gameObject.layer==7)// 7 = destructibles
         {
+            Instantiate(GameManager.Instance.Vfx.VfxExplosion, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
     private void Start()
