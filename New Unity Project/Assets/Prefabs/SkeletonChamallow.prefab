@@ -314,6 +314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4088640045656730017}
+  - component: {fileID: 6636092386910851553}
   m_Layer: 6
   m_Name: weapon2
   m_TagString: Untagged
@@ -335,3 +336,20 @@ Transform:
   m_Father: {fileID: 4088640044027591886}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6636092386910851553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088640045656730016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607968eb9a523fe4bb2f07edfa2737a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Distance: 0.2
+  PushForce: 0
+  ThisPushForce: 10
+  Candy_Damage: 10
+  CandyPrefab: {fileID: 6540013763551304958, guid: 9bf2f64e2c003414c8ce0cbdba46a45a, type: 3}
