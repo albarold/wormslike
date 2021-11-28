@@ -39,6 +39,7 @@ public class Throwing_skeleton : MonoBehaviour
 
     public void Push(Vector2 force) 
     {
+        GetComponent<SkeletonData>().Mana += 10;
         rb.AddForce(force, ForceMode2D.Impulse);
     }
 

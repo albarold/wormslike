@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    
     public static GameManager Instance;
     //public Throwing_skeleton[] Skeletons;
     public List<Throwing_skeleton> Skeletons = new List<Throwing_skeleton>();
@@ -20,7 +21,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private int _currentSkeleton=0;
+    public int _currentSkeleton=0;
     public Player_Controller Pc;
     public GameObject PlayerMenu;
     public GameObject[] LifeBars;
@@ -65,16 +66,18 @@ public class GameManager : MonoBehaviour
             Pc.moving = false;
 
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3)&&Skeletons[_currentSkeleton].GetComponent<SkeletonData>().ManaFull)
         {
+
             Skeletons[_currentSkeleton].SetWeapon(2);
             Pc.moving = false;
+
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        /*if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             Skeletons[_currentSkeleton].SetWeapon(3);
             Pc.moving = false;
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Pc.moving = true;

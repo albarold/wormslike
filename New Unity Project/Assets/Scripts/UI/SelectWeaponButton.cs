@@ -18,7 +18,7 @@ public class SelectWeaponButton : MonoBehaviour
             }
             SelectionButtons[1].SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3)&&GameManager.Instance.Skeletons[GameManager.Instance._currentSkeleton].GetComponent<SkeletonData>().ManaFull)
         {
             foreach (GameObject SelecButton in SelectionButtons)
             {
@@ -26,14 +26,14 @@ public class SelectWeaponButton : MonoBehaviour
             }
             SelectionButtons[2].SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        /*if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             foreach (GameObject SelecButton in SelectionButtons)
             {
                 SelecButton.SetActive(false);
             }
             SelectionButtons[3].SetActive(true);
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             foreach (GameObject SelecButton in SelectionButtons)

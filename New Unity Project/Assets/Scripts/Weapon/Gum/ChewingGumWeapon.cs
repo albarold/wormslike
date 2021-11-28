@@ -14,7 +14,8 @@ public class ChewingGumWeapon : Basic_Weapon
     }
     public override void Launch(Vector2 force)
     {
-        Debug.Log("candy");
+        GameManager.Instance.Skeletons[GameManager.Instance._currentSkeleton].GetComponent<SkeletonData>().Mana = 0;
+        
         Candy = Instantiate(CandyPrefab, transform.parent.position + new Vector3(force.x * Distance, force.y * Distance), Quaternion.identity);
         Candy.GetComponent<Rigidbody2D>().AddForce(force * PushForce, ForceMode2D.Impulse);
         Candy.GetComponent<DoDamage>()._Damages = Candy_Damage;

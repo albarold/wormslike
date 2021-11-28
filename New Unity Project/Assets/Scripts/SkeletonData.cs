@@ -6,18 +6,31 @@ using UnityEngine.UI;
 public class SkeletonData : MonoBehaviour
 {
     public int Life;
-    public int MaxLife;
+    public int MaxLife;    
+    public int Mana;
+    public int MaxMana=45;
+    public int ManaGain=10;
     public GameObject LifeBar;
     [Header("caramel=0, acide= 1, chamallow= 2,chewinggum=3")]
     public int SkeletonNumber;
-
+    public bool ManaFull=false;
     public void Start()
     {
         LifeBar = GameManager.Instance.LifeBars[SkeletonNumber];
         LifeBar.SetActive(true);
+        
     }
     public void Update()
     {
+        if (Mana>=MaxMana)
+        {
+            Mana = MaxMana;
+            ManaFull = true;
+        }
+        else
+        {
+            ManaFull = false;
+        }
         if (Life<=0)
         {
             LifeBar.GetComponent<LifeBarUpdate>().UpdateLife(0, MaxLife);
@@ -34,8 +47,12 @@ public class SkeletonData : MonoBehaviour
         if (Life-dmg>0)
         {
             Life -= dmg;
+            Mana += ManaGain;
         }
         LifeBar.GetComponent<LifeBarUpdate>().UpdateLife(Life, MaxLife);
     }
-   
+    public void UpdateMana(int ManaGain)
+    {
+        
+    }
 }

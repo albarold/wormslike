@@ -13,10 +13,12 @@ public class WeaponManager : MonoBehaviour
 
         weapons[0].SetActive(false);
         weapons[1].SetActive(false);
-        weapons[2].SetActive(false);
+        //weapons[2].SetActive(false);
 
         ActiveWeapon = weapons[index-1];
         ActiveWeapon.SetActive(true);
+
+        
     }
 
     public void Launch(Vector2 force)
