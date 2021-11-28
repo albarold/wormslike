@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 5541635207376090551}
   - component: {fileID: 5541635207376090536}
   - component: {fileID: 8780751670977272060}
-  - component: {fileID: -4759491785259142337}
-  - component: {fileID: 4304172660469250662}
+  - component: {fileID: 7291216631493464497}
   m_Layer: 0
-  m_Name: Caramel
+  m_Name: CaramelShard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5541635207376090538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -121,22 +120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Damages: 10
   SkelLauncher: {fileID: 0}
---- !u!114 &-4759491785259142337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5541635207376090538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9facd897db4f8e84196088c14bbc1e9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CaramelShard: {fileID: 5541635207376090538, guid: 9de7d2e82de8f584bbe0092386ac19a0, type: 3}
-  CaramelShardForce: 1000
---- !u!70 &4304172660469250662
-CapsuleCollider2D:
+--- !u!58 &7291216631493464497
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,6 +133,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.048823822, y: -0.42454073}
-  m_Size: {x: 4.293373, y: 2.511242}
-  m_Direction: 1
+  m_Offset: {x: 0.09406023, y: -0.43894914}
+  serializedVersion: 2
+  m_Radius: 1.7785192

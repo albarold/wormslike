@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DoDamage : MonoBehaviour
 {
+    public bool DestroyOnHit = true;
     private bool TimerOn;
     private float Timer;
     public int _Damages;
@@ -14,7 +15,11 @@ public class DoDamage : MonoBehaviour
         if (collision.gameObject.layer== 6 && collision.gameObject!=SkelLauncher) //6=skelete
         {
             collision.gameObject.GetComponent<SkeletonData>().TakeDamage(_Damages);
-            Destroy(gameObject);
+            if (DestroyOnHit)
+            {
+                Destroy(gameObject);
+            }
+            
         }
         if (collision.gameObject.layer==7)// 7 = destructibles
         {
