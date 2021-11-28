@@ -30,12 +30,12 @@ public class SkeletonData : MonoBehaviour
     }
     public void TakeDamage(int dmg)
     {
-        LifeBar.GetComponent<LifeBarUpdate>().UpdateLife(Life, MaxLife);
+        
         if (Life-dmg>0)
         {
             Life -= dmg;
         }
-        
+        LifeBar.GetComponent<LifeBarUpdate>().UpdateLife(Life, MaxLife);
     }
    
 }

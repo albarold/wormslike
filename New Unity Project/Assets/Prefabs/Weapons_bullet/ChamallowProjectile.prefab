@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef435568772def54184992a7d2add64c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScaleChange: {x: 0.03, y: 0.03, z: 0}
   DegatSupp: 10
 --- !u!50 &6540013763551304952
 Rigidbody2D:
