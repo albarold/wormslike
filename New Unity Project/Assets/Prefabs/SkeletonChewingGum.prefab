@@ -48,7 +48,7 @@ MonoBehaviour:
   weapons:
   - {fileID: 4088640045518812758}
   - {fileID: 4088640045656730016}
-  ActiveWeapon: {fileID: 4088640045656730016}
+  ActiveWeapon: {fileID: 4088640045518812758}
 --- !u!1 &4088640045498311736
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,8 +151,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Life: 100
   MaxLife: 100
+  Mana: 0
+  MaxMana: 45
+  ManaGain: 10
   LifeBar: {fileID: 0}
   SkeletonNumber: 3
+  ManaFull: 0
 --- !u!114 &4088640045498311733
 MonoBehaviour:
   m_ObjectHideFlags: 0
