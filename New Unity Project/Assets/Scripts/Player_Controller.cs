@@ -124,7 +124,7 @@ public class Player_Controller : MonoBehaviour
     {
 
         Skel.ActivateRb();
-        if (moving)
+        if (moving&&!asMoved)
         {
             Debug.Log("skel");
             Skel.Push(force*pushForce);

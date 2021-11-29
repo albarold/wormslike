@@ -49,6 +49,10 @@ public class SkeletonData : MonoBehaviour
             Life -= dmg;
             IncreaseMana(5);
         }
+        else
+        {
+            Life = 0;
+        }
         LifeBar.GetComponent<LifeBarUpdate>().UpdateLife(Life, MaxLife);
     }
     public void IncreaseMana(int ManaGain)
