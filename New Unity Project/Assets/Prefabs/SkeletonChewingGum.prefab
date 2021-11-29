@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554a9031665166d4580154ed54f7a6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 100
-  MaxLife: 100
+  Life: 80
+  MaxLife: 80
   Mana: 0
   MaxMana: 45
   ManaGain: 10
@@ -186,7 +186,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2173548}
+  m_Offset: {x: -0.05, y: -0.65}
   serializedVersion: 2
   m_Radius: 2.7218497
 --- !u!50 &4088640045498311737
