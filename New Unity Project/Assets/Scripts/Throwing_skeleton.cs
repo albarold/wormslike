@@ -12,7 +12,7 @@ public class Throwing_skeleton : MonoBehaviour
 
     int layer_mask;
 
-
+    public GameObject Highlight;
     public bool OnGround =false;
     private RaycastHit2D hitInfo;
     private void Awake()
@@ -59,6 +59,13 @@ public class Throwing_skeleton : MonoBehaviour
         rb.isKinematic = true;
     }
 
-
+    public void ActiveHighLight()
+    {
+        Highlight.SetActive(true);
+    }    
+    public void DesactiveHighLight()
+    {
+        Highlight.SetActive(false);
+    }
 
 }

@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     }
     public void EndOfTurn()
     {
+        Skeletons[_currentSkeleton].DesactiveHighLight();
         Skeletons[_currentSkeleton].GetComponent<SkeletonData>().IncreaseMana(10);
         Debug.Log("turn end");
         if (_currentSkeleton < Skeletons.Count - 1)
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
         }
 
         Pc.Skel = Skeletons[_currentSkeleton];
+        Skeletons[_currentSkeleton].ActiveHighLight();
         
     }
 
