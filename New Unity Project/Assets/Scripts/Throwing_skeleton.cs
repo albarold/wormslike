@@ -39,7 +39,7 @@ public class Throwing_skeleton : MonoBehaviour
 
     public void Push(Vector2 force) 
     {
-        
+        Instantiate(GameManager.Instance.Audio.SoundFxs[0], gameObject.transform.position, Quaternion.identity);
         rb.AddForce(force, ForceMode2D.Impulse);
     }
 

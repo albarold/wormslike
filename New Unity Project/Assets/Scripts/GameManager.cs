@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] VictorySkeleton;
     public int _currentSkeleton=0;
     public Player_Controller Pc;
+    public AudioManager Audio;
     public GameObject PlayerMenu;
     public GameObject[] LifeBars;
     public VfxManager Vfx;

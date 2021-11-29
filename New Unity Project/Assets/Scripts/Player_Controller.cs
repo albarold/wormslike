@@ -126,6 +126,7 @@ public class Player_Controller : MonoBehaviour
         Skel.ActivateRb();
         if (moving&&!asMoved)
         {
+            Instantiate(GameManager.Instance.Audio.SoundFxs[0], gameObject.transform.position, Quaternion.identity);
             Debug.Log("skel");
             Skel.Push(force*pushForce);
             moving = false;
@@ -133,6 +134,7 @@ public class Player_Controller : MonoBehaviour
         }
         else if(!asShot)
         {
+            Instantiate(GameManager.Instance.Audio.SoundFxs[1], gameObject.transform.position, Quaternion.identity);
             Debug.Log("weapon");
             Skel.wp.Launch(force);
             asShot = true;

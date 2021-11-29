@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DoDamage : MonoBehaviour
 {
+
     public bool DestroyOnHit = true;
     private bool TimerOn;
     private float Timer;
@@ -14,12 +15,14 @@ public class DoDamage : MonoBehaviour
 
         if (collision.gameObject.layer== 6 && collision.gameObject!=SkelLauncher) //6=skelete
         {
+
             collision.gameObject.GetComponent<SkeletonData>().TakeDamage(_Damages);
             if (DestroyOnHit)
             {
                 Destroy(gameObject);
             }
-            
+            Instantiate(GameManager.Instance.Audio.SoundFxs[0], collision.gameObject.transform.position, Quaternion.identity);
+
         }
         if (collision.gameObject.layer==7)// 7 = destructibles
         {
