@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public GameObject VictoryScreen;
+    public GameObject[] VictorySkeleton;
     public int _currentSkeleton=0;
     public Player_Controller Pc;
     public GameObject PlayerMenu;
@@ -96,6 +98,10 @@ public class GameManager : MonoBehaviour
     {
         if (Skeletons.Count<=1)
         {
+            VictoryScreen.SetActive(true);
+            VictorySkeleton[Skeletons[_currentSkeleton].GetComponent<SkeletonData>().SkeletonNumber].SetActive(true);
+            
+
             Debug.Log("Fin");
         }
     }
