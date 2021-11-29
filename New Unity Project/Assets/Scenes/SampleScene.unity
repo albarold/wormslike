@@ -2476,6 +2476,133 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811295885}
   m_CullTransparentMesh: 1
+--- !u!1 &815301877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 815301879}
+  - component: {fileID: 815301878}
+  m_Layer: 0
+  m_Name: Sound_OST
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &815301878
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815301877}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0153c3f51c2efce4f91661a217415968, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.299
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &815301879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815301877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &818215987
 GameObject:
   m_ObjectHideFlags: 0
@@ -5313,6 +5440,71 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSelection
       objectReference: {fileID: 0}
+    - target: {fileID: 3966213059560337249, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_text
+      value: "Attaque speciale :\nUn Bonbon qui rebondit trois fois avant d\u2019exploser,
+        chaque rebond\r\naugmente les degats du Bonbon.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059560337249, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSize
+      value: 35.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059560337249, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_margin.z
+      value: 174.21008
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059560337249, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 35.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059560337262, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 630.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059560337262, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 211.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059560337262, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 350.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059560337262, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -55.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059706706564, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_text
+      value: Crane Festif
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059706706564, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059706706564, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_margin.x
+      value: -3.1346054
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059706706564, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059706706565, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 317.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059706706565, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 65.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059706706565, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 87.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213059706706565, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3966213059848558839, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5345,6 +5537,42 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3966213060019644577, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 861.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060019644577, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 352.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060019644577, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 14.189972
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060019644577, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -320.71002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060025630398, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.9999695
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060250187276, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1286.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060250187276, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 604.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060250187276, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 416.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060250187276, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 219.23999
+      objectReference: {fileID: 0}
     - target: {fileID: 3966213060250187279, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5372,6 +5600,242 @@ PrefabInstance:
     - target: {fileID: 3966213060250187279, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060302204281, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1616.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060302204281, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1354.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060302204281, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -359
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060302204281, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060310063752, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060310063752, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 201.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060310063752, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 250.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060310063752, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -58
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060310063755, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_text
+      value: "Attaque speciale : \nCe projectile explose au contact et asperge d'acide
+        les joueurs proches, les\r\nfaisant reculer de douleur.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060310063755, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSize
+      value: 33.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060310063755, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_margin.z
+      value: 86.334854
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060310063755, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 33.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060386999468, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_text
+      value: Crane Citrouille
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060386999468, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060386999468, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060386999469, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 218.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060386999469, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 54.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060386999469, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060386999469, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 206.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060573937762, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1258.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060573937762, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1316.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060573937762, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -372
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060573937762, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060638646802, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 997.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060638646802, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1608.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060638646802, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -421
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060638646802, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060731545366, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_text
+      value: "Attaque speciale : \nBonbon qui, en explosant, provoque d'autres petits
+        chewing gum\r\npartant dans tous les sens pour exploser apres quelques rebonds.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060731545366, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSize
+      value: 29.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060731545366, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_margin.z
+      value: 155.21576
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060731545366, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 29.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060731545367, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 662.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060731545367, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 255.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060731545367, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 272
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213060731545367, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061027441714, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 497.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061027441714, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 186.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061027441714, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 151.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061027441714, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061027441717, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_text
+      value: "Attaque speciale :\nUn bonbon qui explose au contact, provoquant de
+        nombreux fragments\r\naux alentours. Les fragments causent moins de d\xE9g\xE2ts
+        que le bonbon entier.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061027441717, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSize
+      value: 29.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061027441717, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_margin.z
+      value: 27.814987
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061027441717, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 29.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061085331098, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1099.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061085331098, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1349.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061085331098, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -405.50003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061085331098, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30.399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061145626228, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 356.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061145626228, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061145626228, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 87.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061145626228, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 199
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061145626231, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_text
+      value: Crane Revenant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061145626231, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061145626231, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061194010458, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1286.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061194010458, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 604.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061194010458, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -405
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061194010458, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 216
       objectReference: {fileID: 0}
     - target: {fileID: 3966213061194010461, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
       propertyPath: m_Interactable
@@ -5437,6 +5901,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3966213061459431463, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1286.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061459431463, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 604.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061459431463, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -408.24002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061459431463, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100.850006
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061523264116, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1286.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061523264116, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 604.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061523264116, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 409.76996
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061523264116, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -99.24002
+      objectReference: {fileID: 0}
     - target: {fileID: 3966213061523264119, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5464,6 +5960,26 @@ PrefabInstance:
     - target: {fileID: 3966213061523264119, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061544948806, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061544948806, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 204
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061544948857, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_text
+      value: Crane Sorcier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061544948857, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966213061544948857, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 674aa0cc40bac044681008a24c648d1e, type: 3}
